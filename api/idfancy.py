@@ -1,6 +1,5 @@
 import re
 import random
-from json import JSONEncoder
 
 
 class Noun:
@@ -33,7 +32,7 @@ def process_ids(ids, adjectives, nouns):
 
 def _process_id(_id, adjectives, nouns):
     # check if the id matches the specific pattern
-    id_pattern = re.compile("^[a-zA-Z0-9]{8}$")
+    id_pattern = re.compile("^[a-zA-Z0-9]+$")
     link_pattern = re.compile("^(http://)?game.rewinside.tv/([a-zA-Z0-9]{8})$")
 
     real_id = _id

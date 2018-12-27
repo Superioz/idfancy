@@ -22,7 +22,7 @@ function doPostRequest() {
 
     // get value to send from box
     var data = box.value;
-    if (/^([a-zA-Z0-9]{8})(,([a-zA-Z0-9]{8}))*$/.test(data)) {
+    if (/^([a-zA-Z0-9]+)(,([a-zA-Z0-9]+))*$/.test(data)) {
         var arr = data.split(",");
 
         for (var i = 0; i < arr.length; i++) {
