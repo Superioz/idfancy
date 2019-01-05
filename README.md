@@ -4,7 +4,7 @@ Simple python script to generate a random German name from a gameid.
 Example: `GthM7pA3` would result in `das visuelle Allergen`, pretty funny, huh?
 
 Current size of adjectives: **5560**  
-Current size of nouns: **48994**
+Current size of nouns: **48992**
 
 Usage :pray:
 -----
