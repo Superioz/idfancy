@@ -1,4 +1,3 @@
-import re
 import random
 
 
@@ -32,15 +31,15 @@ def process_ids(ids, adjectives, nouns):
 
 def _process_id(_id, adjectives, nouns):
     # check if the id matches the specific pattern
-    id_pattern = re.compile("^[a-zA-Z0-9]+$")
-    link_pattern = re.compile("^(http://)?game.rewinside.tv/([a-zA-Z0-9]{8})$")
+    # id_pattern = re.compile("^[a-zA-Z0-9]+$")
+    # link_pattern = re.compile("^(http://)?game.rewinside.tv/([a-zA-Z0-9]{8})$")
 
     real_id = _id
-    if link_pattern.match(_id):
-        real_id = _id.split("tv/")[1]
+    # if link_pattern.match(_id):
+    #    real_id = _id.split("tv/")[1]
 
-    if not id_pattern.match(real_id):
-        return real_id, None
+    # if not id_pattern.match(real_id):
+    #    return real_id, None
 
     # hashes the id and turns it into a random combination
     # of adjectives and nouns

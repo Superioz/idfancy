@@ -1,3 +1,13 @@
+// prepares the button
+document.getElementById("ids").addEventListener("keyup", function (event) {
+    if (event.key != "Enter") return;
+
+    doPostRequest()
+});
+document.getElementById("button").addEventListener("click", function (event) {
+    doPostRequest()
+});
+
 // executes the post request
 // takes the ids from the input field and send
 // them as data to the POST request consumer
@@ -22,14 +32,12 @@ function doPostRequest() {
 
     // get value to send from box
     var data = box.value;
-    if (/^([a-zA-Z0-9]+)(,([a-zA-Z0-9]+))*$/.test(data)) {
-        var arr = data.split(",");
+    var arr = data.split(",");
 
-        for (var i = 0; i < arr.length; i++) {
-            arr[i] = "\"" + arr[i] + "\""
-        }
-        data = "[" + arr.join(",") + "]"
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = "\"" + arr[i] + "\""
     }
+    data = "[" + arr.join(",") + "]"
 
     xhttp.send(data);
 

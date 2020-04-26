@@ -11,25 +11,25 @@
     <!-- .css from Skeleton framework-->
     <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
-
-    <!-- Own JavaScript file for helper methods -->
-    <script src="{{ url_for('static',filename='js/app.js') }}"></script>
 </head>
 
 <body style="background-color: #ffffff">
-<div class="container">
-    <p></p>
-    <h1>ID Fancifier</h1>
-    <form id="form">
-        <input type="text" id="ids" size="40" width="500" autofocus placeholder="oRRUcuvc,UTlsBvC6">
-        <input class="button-primary" type="button" onclick="doPostRequest()" value="Send"/>
-    </form>
+    <div class="container">
+        <p></p>
+        <h1>ID Fancifier</h1>
+        <div id="form">
+            <input type="text" id="ids" size="40" width="500" autofocus placeholder="oRRUcuvc,UTlsBvC6">
+            <input id="button" class="button-primary" type="button" value="Send"/>
+        </div>
 
-    <h4 id="last-result">Last Result:</h4>
-    <pre><code id="result">Hier könnte Ihre Werbung stehen</code></pre>
-</div>
-<div class="container">
-    Made with ♥ by <a href="https://github.com/Superioz" target="_blank">Superioz</a>
-</div>
+        <h4 id="last-result">Last Result:</h4>
+        <pre><code id="result">Hier könnte Ihre Werbung stehen</code></pre>
+    </div>
+    <div class="container">
+        Made with ♥ by <a href="https://github.com/Superioz" target="_blank">Superioz</a>
+    </div>
+
+    <!-- Own JavaScript file for helper methods -->
+    <script src="{{ url_for('static',filename='js/app.js') }}"></script>
 </body>
 </html>
